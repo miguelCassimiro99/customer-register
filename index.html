@@ -1,0 +1,63 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+
+    <title>Client Register</title>
+</head>
+
+<body>
+    <div>
+        <h3>Cadastro Cliente 1</h3>
+
+        <div class="container">
+            <form onsubmit="customerController.addCustomer(event)">
+
+                <div class="form-group">
+                    <label for="customer-name">Nome do cliente</label>
+                    <input type="text" name="customer-name" id="customer-name">
+                </div>
+
+                <div class="form-group">
+                    <label for="customer-phone">Telefone</label>
+                    <input type="tel" name="customer-phone" id="customer-phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="customer-email">E-mail</label>
+                    <input type="email" name="customer-email" id="customer-email">
+                </div>
+
+                <button type="submit">
+                  Incluir
+                </button>
+
+                <button onclick="customerController.deleteCustomer()">
+                  Apagar tudo
+                </button>
+
+                <button onclick="customerController.envia()">
+                  Enviar
+                </button>
+
+            </form>
+
+        </div>
+        <div id="customerView"></div>
+    </div>
+
+    <script src="js/app/models/Customer.js"></script>
+    <script src="js/app/views/CustomerView.js"></script>
+    <script src="js/app/controllers/CustomerController.js"></script>
+    <script src="js/app/models/CustomersList.js"></script>
+
+    <script>
+        let customerController = new CustomerController();
+    </script>
+
+</body>
+
+</html>

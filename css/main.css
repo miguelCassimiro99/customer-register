@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 30vw;
+    min-height: 35vh;
+    margin: 20px;
+    border-radius: 5px;
+    border: 1px solid rgb(158, 138, 138);
+    display: flex;
+    justify-content: center;
+}
+
+.form-group {
+    display: block;
+}
+
+label {
+    display: block;
+    margin: 15px 0px 5px 0px;
+}
+
+button {
+    margin-top: 10px;
+}
